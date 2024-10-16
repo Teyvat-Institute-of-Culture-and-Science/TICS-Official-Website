@@ -8,8 +8,8 @@ hero:
   tagline: "与你一起去学习，与你去看高山大海，带你去吃世界美味"
   actions:
     - theme: brand
-      text: "了解我们的故事"
-      link: /overview
+      text: "团队成员"
+      link: /navigation/members
     - theme: alt
       text: "寻找我们"
       link: /navigation/contactus
@@ -29,5 +29,41 @@ features:
   - icon: 🏰
     title: "多样的旗下组织"
     details: "我们通过 Minecraft 生存服和其他提瓦特以及本院二创以外的内容，为旅行者提供多元化的游戏外体验。"
+---
 
---- 
+## 欢迎来到提瓦特文化科学研究院
+
+我们是一个充满激情的二创组织，致力于重新诠释和探索提瓦特的魅力。无论你是对文化研究感兴趣，还是热爱原创故事，或者想要体验游戏之外的提瓦特，这里都有适合你的内容。
+
+### 我们
+
+- 创造丰富多彩的二创作品
+- 培养充满活力的创作者社区
+- 提供多元化的提瓦特体验
+
+
+
+<style>
+:root {
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #FFA8DF 30%, #62BEFF);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #FFA8DF 50%, #62BEFF 50%);
+  --vp-home-hero-image-filter: blur(40px);
+}
+
+.VPNavBarTitle .title {
+  background: linear-gradient(120deg, #FFA8DF, #62BEFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.VPButton.brand {
+  background-image: linear-gradient(to right, #FFA8DF, #62BEFF);
+  border: none;
+}
+
+.VPButton.brand:hover {
+  opacity: 0.9;
+}
+</style>

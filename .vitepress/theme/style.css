@@ -1,37 +1,53 @@
-:root {
-  --vp-c-brand: #FF69B4;
-  --vp-c-brand-light: #FFB6C1;
-  --vp-c-brand-lighter: #FFC0CB;
-  --vp-c-brand-dark: #FF1493;
-  --vp-c-brand-darker: #C71585;
-  
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #FFB6C1 30%, #FF69B4);
-  
-  --vp-button-brand-border: #FF69B4;
-  --vp-button-brand-text: #fff;
-  --vp-button-brand-bg: #FF69B4;
-  --vp-button-brand-hover-border: #FFB6C1;
-  --vp-button-brand-hover-text: #fff;
-  --vp-button-brand-hover-bg: #FFB6C1;
-  --vp-button-brand-active-border: #FF1493;
+.social-links-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
-.dark {
-  --vp-c-brand: #FF69B4;
-  --vp-c-brand-light: #FFB6C1;
-  --vp-c-brand-lighter: #FFC0CB;
-  --vp-c-brand-dark: #FF1493;
-  --vp-c-brand-darker: #C71585;
-  
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #FFC0CB 30%, #FFB6C1);
-  
-  --vp-button-brand-border: #FF69B4;
-  --vp-button-brand-text: #fff;
-  --vp-button-brand-bg: #FF69B4;
-  --vp-button-brand-hover-border: #FFB6C1;
-  --vp-button-brand-hover-text: #fff;
-  --vp-button-brand-hover-bg: #FFB6C1;
-  --vp-button-brand-active-border: #FF1493;
+.social-link {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--vp-c-bg-soft);
+  transition: all 0.3s ease;
+  text-decoration: none;  /* 移除下划线 */
+  border: 1px solid var(--vp-c-divider);
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--vp-c-brand);
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+  transform: scale(1.1);
+}
+
+.social-content {
+  flex: 1;
+}
+
+.social-platform {
+  font-weight: 500;
+  color: var(--vp-c-text-1);
+  margin-bottom: 0.25rem;
+}
+
+.social-handle {
+  font-size: 0.9em;
+  color: var(--vp-c-text-2);
+}
+
+.social-link:hover .social-platform {
+  color: var(--vp-c-brand);
 }

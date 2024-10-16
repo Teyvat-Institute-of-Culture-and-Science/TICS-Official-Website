@@ -1,0 +1,408 @@
+/* Enhanced Animation Keyframes */
+@keyframes fadeInScale {
+  from { 
+    opacity: 0; 
+    transform: scale(0.98) translateY(20px);
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1) translateY(2);
+  }
+}
+
+@keyframes rotateIn {
+  from { 
+    opacity: 1; 
+    transform: perspective(1000px) rotateX(-5deg);
+  }
+  to { 
+    opacity: 1; 
+    transform: perspective(1000px) rotateX(0);
+  }
+}
+
+@keyframes blurIn {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes floatingAnimation {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes mdTransition {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subtlePopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Global Styles */
+body {
+  overflow-x: hidden;
+  animation: blurIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: 'Segoe UI Semibold','HiraGinoGB', -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Content Area Animations */
+.VPContent {
+  animation: blurIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.VPContent > div {
+  animation: fadeInScale 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Markdown File Transition */
+.VPDoc .content {
+  animation: mdTransition 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Sidebar Animation */
+.VPSidebar {
+  animation: slideInFromRight 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Footer Animation */
+.VPFooter {
+  animation: fadeInScale 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+/* Enhanced Link Styles */
+a {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+a:hover {
+  color: var(--vp-c-brand);
+  transform: translateY(-1px);
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -1px;
+  left: 0;
+  background-color: var(--vp-c-brand);
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Enhanced Button Animations */
+.VPButton {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  position: relative;
+}
+
+.VPButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.VPButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: all 0.5s;
+}
+
+.VPButton:hover::before {
+  left: 100%;
+}
+
+/* Enhanced Card Effects */
+.VPTeamMembersItem, .VPSponsorsItem, .VPDocAsideSponsors {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.VPTeamMembersItem:hover, .VPSponsorsItem:hover, .VPDocAsideSponsors:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Hero Section Animation */
+.VPHero {
+  animation: floatingAnimation 5s ease-in-out infinite;
+}
+
+/* Enhanced Search Box Animation */
+.VPNavBarSearch {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.VPNavBarSearch:focus-within {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(var(--vp-c-brand-rgb), 0.15);
+}
+
+/* Social Links Styles */
+.social-links-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--vp-c-bg-soft);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid var(--vp-c-divider);
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--vp-c-brand);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.social-link:hover .social-icon {
+  transform: scale(1.05) rotate(5deg);
+}
+
+.social-content {
+  flex: 1;
+}
+
+.social-platform {
+  font-weight: 500;
+  color: var(--vp-c-text-1);
+  margin-bottom: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+.social-handle {
+  font-size: 0.9em;
+  color: var(--vp-c-text-2);
+}
+
+.social-link:hover .social-platform {
+  color: var(--vp-c-brand);
+}
+
+/* Japanese Font Settings */
+[lang="ja"],
+:lang(ja) {
+  font-family: 
+    'Segoe UI', 'HiraKakuStd-W8-AlphaNum', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo UI', 'Yu Gothic', 
+    'MS PGothic', 'MS Gothic', 'Malgun Gothic', 'Apple SD Gothic Neo', 
+    'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+/* Enhanced Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vp-c-bg-soft);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-brand);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-dark);
+}
+
+/* Custom Fonts */
+@font-face {
+  font-family: 'HiraKakuStd-W8-AlphaNum';
+  src: url('../../public/HiraginoKakuGothicStd-W8.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HiraGinoGB';
+  src: url('../../public/HiraginoSansGB-W6.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TeyvatFont';
+  src: url('../../public/TeyvatBlack-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Teyvat Language Font Setting */
+[lang="Teyvat"],
+:lang(Teyvat) {
+  font-family: 'TeyvatFont', sans-serif;
+}
+
+/* Enhanced List Item Animations */
+.VPSidebarItem {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.VPSidebarItem:hover {
+  transform: translateX(3px);
+}
+
+/* Table Enhancements */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+table:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+th, td {
+  border: 1px solid var(--vp-c-divider);
+  padding: 12px;
+  transition: background-color 0.3s ease;
+}
+
+tr:hover {
+  background-color: var(--vp-c-bg-soft);
+}
+
+/* Code Block Enhancements */
+pre {
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+pre:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Enhancements */
+img {
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Menu Item Animations */
+.VPNavBarMenuLink {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.VPNavBarMenuLink:hover {
+  transform: translateY(-1px);
+}
+
+/* Dropdown Menu Animations */
+.VPNavBarMenuGroup .VPNavBarMenuGroupContent {
+  animation: subtlePopIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Page Transition Effect */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Enhanced Focus Styles for Accessibility */
+:focus {
+  outline: 2px solid var(--vp-c-brand);
+  outline-offset: 2px;
+  transition: outline-offset 0.2s ease;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Dark Mode Transition */
+@media (prefers-color-scheme: dark) {
+  body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
