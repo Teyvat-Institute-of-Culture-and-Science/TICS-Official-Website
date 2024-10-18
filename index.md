@@ -43,27 +43,3 @@ features:
 
 
 
-<style>
-:root {
-
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #FFA8DF 30%, #62BEFF);
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, #FFA8DF 50%, #62BEFF 50%);
-  --vp-home-hero-image-filter: blur(40px);
-}
-
-.VPNavBarTitle .title {
-  background: linear-gradient(120deg, #FFA8DF, #62BEFF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.VPButton.brand {
-  background-image: linear-gradient(to right, #FFA8DF, #62BEFF);
-  border: none;
-}
-
-.VPButton.brand:hover {
-  opacity: 0.9;
-}
-</style>
