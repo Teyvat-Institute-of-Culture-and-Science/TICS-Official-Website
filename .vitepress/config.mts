@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "T.I.C.S Next",
+  title: "提瓦特文化科学研究院",
   description: "以创意与热爱重塑提瓦特的二创组织",
   locales: {
     root: {
@@ -13,6 +13,7 @@ export default defineConfig({
       lang: 'ja-JP',
       link: '/ja/',
       description: '創造性と愛情でテイワットの二次創作を再構築する組織',
+      title: 'テイワット文化科学研究院',
       themeConfig: {
         nav: [
           { text: 'ホーム', link: '/ja/' },
@@ -120,7 +121,7 @@ export default defineConfig({
         items: [
           { text: '购买', link: '/shop' },
           { text: '购买查询', link: '/shop-dhcx' },
-          { text: '往期购买查询(24年8月前)', link: '/hatsu' },
+          { text: '往期购买查询(24年10月5日前)', link: '/hatsu' },
           { text: '订单号说明', link: '/documents/zzdh' }
         ]
       },
@@ -161,6 +162,13 @@ export default defineConfig({
                     { text: '穹学', link: '/navigation/works/books/starrailics' },
                     { text: '语文', link: '/navigation/works/books/language' },
                     { text: '提瓦特生物志', link: '/navigation/works/books/biology' }
+                  ]
+                },
+                { 
+                  text: '程序',
+                  collapsed: true,
+                  items: [
+                    { text: 'HoYoAlarms', link: '/navigation/works/programs/HoYoAlarms' },
                   ]
                 },
               ]

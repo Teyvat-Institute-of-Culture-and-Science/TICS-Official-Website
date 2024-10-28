@@ -9,7 +9,7 @@ layout: doc
 
 ## 总介绍
 
-《原学》（英文名："Genology"，日文名："<span lang="ja">原学</span>"/ <span lang="ja">げんがく</span> /<span lang="ja"> Gengaku</span>，提瓦特语：“<span lang="Teyvat"> Genology</span>”）是提瓦特文化研究院推出的第二套书籍。这部作品深入探讨了提瓦特世界的基本规则、历史变迁和世界结构，为读者提供了全面了解这个奇幻世界的机会。《原学》以其严谨的学术态度和丰富的内容，成为探索提瓦特世界的权威指南。
+《原学》（英文名："Genology"，日文名："<span lang="ja"><Furigana text="原%げん%学%がく%" /></span>"/<span lang="ja"> Gengaku</span>，提瓦特语：“<span lang="Teyvat"> Genology</span>”）是提瓦特文化研究院推出的第二套书籍。这部作品深入探讨了提瓦特世界的基本规则、历史变迁和世界结构，为读者提供了全面了解这个奇幻世界的机会。《原学》以其严谨的学术态度和丰富的内容，成为探索提瓦特世界的权威指南。
 
 ## 概况
 

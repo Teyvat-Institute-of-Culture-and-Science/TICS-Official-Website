@@ -5,7 +5,7 @@ import './custom.css'
 import GlobalNotice from './GlobalNotice.vue'
 import GeneralMembersList from './components/GeneralMembersList.vue'
 import Hitokoto from './components/Hitokoto.vue'
-import CustomLayout from './CustomLayout.vue'
+import Furigana from './components/Furigana.vue'
 
 
 export default {
@@ -18,5 +18,6 @@ export default {
   enhanceApp({ app }) {
     app.component('GeneralMembersList', GeneralMembersList)
     app.component('Hitokoto', Hitokoto)
+    app.component('Furigana', Furigana)
   }
 }
