@@ -13,4 +13,9 @@
 
 | Name                         | Address              | Copyright                                         |
 |:----------------------------:|:--------------------:|:-------------------------------------------------:|
-| Hitokoto（JA/CN Name：ヒトコト/一言） | https://hitokoto.cn/ | MoeTeam（CN Name：萌创团队） |
+| Hitokoto（JA/CN Name：ヒトコト/一言） | https://hitokoto.cn/ | MoeTeam（CN Name：萌创团队
+
+## Network
+| Name                         | Address              | Copyright                                         |
+|:----------------------------:|:--------------------:|:-------------------------------------------------:|
+| MohuaFrp（嘿华Frp） | https://frp.mhjz1.cn/| mohua
